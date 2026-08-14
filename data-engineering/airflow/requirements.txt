@@ -1,0 +1,2 @@
+polars==1.*
+clickhouse-connect==0.*

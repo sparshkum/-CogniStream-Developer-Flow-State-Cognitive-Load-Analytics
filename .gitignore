@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.pytest_cache/
+
+# Data-engineering artifacts (mock landing zone + intermediate parquet)
+data-engineering/data/
+
+# Node / frontend
+node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+frontend/tsconfig.node.tsbuildinfo
+
+# Airflow runtime
+data-engineering/airflow/logs/
+data-engineering/airflow/plugins/
+
+# ClickHouse / Postgres local volumes (only relevant if bind-mounted instead of named volumes)
+clickhouse-data/
+postgres-data/
+
+# Env files with real secrets
+.env
+!.env.example
+
+# Editor/OS (keep .vscode/settings.json -- pins the workspace TypeScript SDK)
+.vscode/*
+!.vscode/settings.json
+.DS_Store
+Thumbs.db

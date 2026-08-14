@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cognistream"
+version = "0.1.0"
+description = "CogniStream data-engineering pipeline: mock extractors, Polars cleaning, flow-state analytics, ClickHouse loading."
+requires-python = ">=3.11"
+dependencies = [
+    "polars>=1.0",
+    "clickhouse-connect>=0.7",
+]
+
+[tool.setuptools.packages.find]
+include = ["cognistream*"]
